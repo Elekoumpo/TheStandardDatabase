@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoring Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Photos/logo.png" alt="Logo">
+            </div>
+            <!-- Add burger menu icon with onclick attribute -->
+            <div class="burger-menu" onclick="toggleFilterSortMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-left">
+                <img class="modal-photo" src="" alt="Mentor Photo">
+              </div>
+              <div class="modal-right">
+                <h2 class="modal-name"></h2>
+                <p class="modal-age"></p>
+                <p class="modal-location"></p>
+                <p class="modal-role"></p>
+                <p class="modal-industry"></p>
+                <p class="modal-description"></p>
+                
+              </div>
+            </div>
+          </div>
+        <h1 class="title">MEET THE MEMBERS</h1>
+
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search">
+          <button id="search-button">SEARCH</button>
+      </div>
+
+        <div class="content">
+            <div class="filter-container">
+                <!-- Move filter and sort options inside filter-container -->
+                <details class="filter-options">
+                  <summary>FILTER</summary>
+                  <div class="filter-section">
+                    <h3>Age</h3>
+                    <div id="age-range"></div>
+                    <div id="age-labels">
+                      <span id="min-age-label"></span> - <span id="max-age-label"></span>
+                    </div>
+                    <input type="hidden" id="min-age" value="0">
+                    <input type="hidden" id="max-age" value="100">
+                  </div>
+                  <div class="filter-section">
+                    <h3>Location</h3>
+                    <div id="location-filters">
+                      <!-- Location checkboxes will be added here -->
+                    </div>
+                  </div>
+                  <div class="filter-section">
+                    <h3>Industry</h3>
+                    <div id="industry-filters">
+                      <!-- Industry checkboxes will be added here -->
+                    </div>
+                  </div>
+                  <button id="apply-filters">Apply</button>
+                  <button id="reset-filters">Reset Filters</button>
+                </details>
+                <div class="sort-container">
+                  <details class="sort-options">
+                    <summary>SORT</summary>
+                    <!-- Update the sort-options in the index.html file -->
+                      <select id="sort-options">
+                          <option value="alphabetically">A-Z Alphabetically</option>
+                          <option value="age-highest">Age - Highest</option>
+                          <option value="age-lowest">Age - Lowest</option>
+                          <option value="industry">Industry</option>
+                          <option value="location">Location</option> <!-- Add this line -->
+                      </select>
+                  </details>
+                </div>
+            </div>
+          <div class="mentor-container">
+            <!-- Mentor cards will be added here -->
+          </div>
+          <div class="pagination-container">
+            <div class="pagination"></div>
+          </div>
+        </div>
+      </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
